@@ -1,0 +1,21 @@
+<div class="my-5">
+  <div *ngFor="let todo of todos">
+    <div class="card my-3" (click)="changeTodoStatus(todo)"
+      [ngClass]="{'border-warning': todo.isComplete, 'border-success': !todo.isComplete} ">
+      <div class="card-header">
+        {{todo.id}}
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{todo.title}}</p>
+          <footer class="blockquote-footer">{{todo.date | date}}</footer>
+        </blockquote>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-danger" (click)="deleteTodo(todo)">Trash</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

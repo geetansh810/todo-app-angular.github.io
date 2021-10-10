@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-person-card [data]="user" [userNew]="newUser" *ngIf="user; else loadingBlock"></app-person-card>
+
+      <ng-template #loadingBlock>
+        <div class="text-center">
+          <div class="spinner-border spinner-grow-mg" role="status">
+          </div>
+          <div>Loading......</div>
+        </div>
+      </ng-template>
+
+    </div>
+  </div>
+</div>

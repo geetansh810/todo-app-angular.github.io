@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="data.picture?.large" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{data.name.title}} {{data.name.first}} {{data.name.last}}</h5>
+    <p class="card-text">{{data.location.country}}</p>
+    <button class="btn btn-primary" (click)="userNew()">Change User</button>
+  </div>
+</div>
